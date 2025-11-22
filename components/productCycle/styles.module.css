@@ -1,0 +1,215 @@
+.container {
+  background-color: #0a0a22;
+}
+
+.contain {
+  max-width: 85%;
+  padding: 96px 0px;
+  margin: 0 auto;
+}
+
+.glowBorder {
+  position: relative;
+  padding: 6px;
+  border-radius: 24px;
+  background: linear-gradient(266.85deg, #5865f2 -2.4%, #9be3c1 155.12%);
+}
+
+.innerContainer {
+  background: #0a0b1e;
+  border-radius: 24px;
+  padding: 60px 40px 40px;
+  position: relative;
+}
+
+.titleBadge {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #0a0b1e;
+}
+
+.titleBadge::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(266.85deg, #5865f2 -2.4%, #9be3c1 155.12%);
+  z-index: -1;
+  padding: 6px;
+  border-radius: 8px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.titleBadge h2 {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 8%;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.contentCard {
+  background: #eef0fe;
+  max-width: 100%;
+  overflow-x: hidden;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.contentCard * {
+  min-width: 0;
+}
+
+.journeySteps {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.step {
+  padding: 24px 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.step:first-child {
+  background: #cbcffb;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.step:last-child {
+  background: #cbcffb;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.step > p {
+  font-weight: 700;
+  font-style: Bold;
+  width: 125px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.stepSvg {
+  position: absolute;
+  top: 45%;
+  right: 14%;
+}
+
+.stepSvgTwo {
+  position: absolute;
+  top: 45%;
+  right: 81.5%;
+}
+
+.mobileDownArrow {
+  display: none;
+}
+
+.stepSvg,
+.stepSvgTwo {
+  display: block;
+}
+
+@media (max-width: 1280px) {
+  .stepSvgTwo {
+    right: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 45px 16px;
+  }
+  .contain {
+    max-width: 100%;
+    padding: 20px 0px;
+  }
+  .stepSvg {
+    position: absolute;
+    top: 13.5%;
+    right: 42.5%;
+    transform: rotate(90deg);
+  }
+
+  .stepSvgTwo {
+    top: 83.5%;
+    right: 42.5%;
+    transform: rotate(90deg);
+  }
+
+  .titleBadge {
+    top: -22px;
+    width: 300px;
+    padding: 12px;
+    justify-content: center;
+  }
+
+  .titleBadge h2 {
+    font-size: 14px;
+  }
+
+  .contentCard {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background: transparent;
+    padding: 20px 0;
+  }
+
+  .step:first-child {
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .step:last-child {
+    background: #cbcffb;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 0px;
+    padding-top: 34px;
+    border-top-right-radius: 0px;
+  }
+
+  .step > p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #0a0b1e;
+    margin-top: 6px;
+  }
+  .innerContainer {
+    padding: 36px 16px 32px;
+  }
+  .glowBorder {
+    padding: 4px;
+  }
+}

@@ -1,0 +1,240 @@
+.container {
+  background-color: #0a0a22;
+  padding: 96px 0px;
+  background-image: url("../../public/assets/Rectangle2.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contain {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.heroTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 832px;
+  margin: 0 auto;
+}
+
+.heroBtn {
+  background: linear-gradient(87.46deg, #04072b -22.69%, #0d1891 133.56%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 11px 12px;
+  color: #ffffff;
+  margin: 0 auto;
+  font-family: "inter", sans-serif;
+  border-radius: 100px;
+  font-size: 12px;
+  position: relative;
+  isolation: isolate;
+}
+
+.heroBtn::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 100px;
+  background: linear-gradient(
+    268.23deg,
+    #c7c7c7 -5.7%,
+    rgba(242, 242, 242, 0) 111.22%
+  );
+  z-index: -1;
+  padding: 1px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.heroTexts > h2 {
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.heroTexts > p {
+  width: 500px;
+  margin: auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #a6abe8;
+}
+
+.pricingGrid {
+  padding-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.pricingCard {
+  background: #17172d;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px 30px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricingCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.pricingCard.popular {
+  border: 1px solid #5865f2;
+}
+
+.popularBadge {
+  font-family: "inter", sans-serif;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #6366f1;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.cardContent {
+  color: white;
+}
+
+.planName {
+  font-size: 18px;
+  font-family: "inter", sans-serif;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: white;
+}
+
+.planDescription {
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #a6abe8;
+  margin: 0 0 30px 0;
+  line-height: 20px;
+}
+
+.priceSection {
+  margin-bottom: 32px;
+}
+
+.price {
+  font-family: "Test Calibre", sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  color: white;
+}
+
+.period {
+  font-family: "inter", sans-serif;
+  font-size: 14px;
+  color: #a6abe8;
+  margin-left: 8px;
+}
+
+.ctaButton {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #2d2d4d;
+  color: #5865f2;
+  padding: 16px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.popular .ctaButton {
+  background: #5865f2;
+  color: #ffffff;
+}
+
+.ctaButton:hover {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: #6366f1;
+  transform: translateX(4px);
+}
+
+.popular .ctaButton:hover {
+  background: #4f46e5;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureItem {
+  font-family: "inter", sans-serif;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  color: #a6abe8;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #6366f1;
+}
+
+.popular .checkIcon {
+  color: #818cf8;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 64px 16px;
+  }
+
+  .contain {
+    max-width: unset;
+  }
+
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroTexts {
+    width: unset;
+  }
+
+  .heroTexts > p {
+    width: unset;
+  }
+
+  .pricingCard.popular {
+    transform: scale(1);
+  }
+
+  .pricingCard.popular:hover {
+    transform: translateY(-8px);
+  }
+}

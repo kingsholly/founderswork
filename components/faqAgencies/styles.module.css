@@ -1,0 +1,96 @@
+.container {
+  background: #0a0a22;
+  padding: 96px 0px;
+  background-image: url("../../public/assets/Rectangle.png");
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.contain {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.heroTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 832px;
+  margin: 0 auto;
+  padding-bottom: 56px;
+}
+
+.heroTexts > h2 {
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.heroBtn {
+  background: linear-gradient(87.46deg, #04072b -22.69%, #0d1891 133.56%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 11px 12px;
+  color: #ffffff;
+  margin: 0 auto;
+  font-family: "inter", sans-serif;
+  border-radius: 100px;
+  font-size: 12px;
+  position: relative;
+  isolation: isolate;
+}
+
+.heroBtn::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 100px;
+  background: linear-gradient(
+    268.23deg,
+    #c7c7c7 -5.7%,
+    rgba(242, 242, 242, 0) 111.22%
+  );
+  z-index: -1;
+  padding: 1px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.contact {
+  font-size: 16px;
+  text-align: center;
+  color: #a6abe8;
+  padding-top: 10px;
+  font-weight: 400;
+}
+
+.contact span {
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 64px 16px;
+    background-size: 900px;
+  }
+
+  .contain {
+    max-width: unset;
+  }
+
+  .heroTexts {
+    width: unset;
+  }
+  .heroTexts > h2 {
+    font-size: 32px;
+  }
+}

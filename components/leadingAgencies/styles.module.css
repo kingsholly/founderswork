@@ -1,0 +1,55 @@
+.container {
+  background: #07071a;
+  padding: 40px 0;
+  background-image: url("../../public/assets/Group 1171275058.png");
+  background-position: center left;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.contain h6 {
+  color: #393b5f;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 8%;
+  margin-bottom: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.marquee {
+  width: 85%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+}
+
+.logo {
+  object-fit: contain;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.track {
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

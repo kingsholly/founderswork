@@ -1,0 +1,170 @@
+.container {
+  background-color: #08081b;
+  padding: 40px 0px 0px 0px;
+  background-image: url("../../public/assets/Group\ 1171275058.png");
+  background-repeat: no-repeat;
+  background-position: 80%;
+  background-size: 50%;
+}
+
+.contain {
+  max-width: 62%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.heroTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 832px;
+  margin: 0 auto;
+}
+
+.heroBtn {
+  background: linear-gradient(87.46deg, #04072b -22.69%, #0d1891 133.56%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 11px 12px;
+  color: #ffffff;
+  margin: 0 auto;
+  font-family: "inter", sans-serif;
+  border-radius: 100px;
+  font-size: 12px;
+  position: relative;
+  isolation: isolate;
+}
+
+.heroBtn::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 100px;
+  background: linear-gradient(
+    268.23deg,
+    #c7c7c7 -5.7%,
+    rgba(242, 242, 242, 0) 111.22%
+  );
+  z-index: -1;
+  padding: 1px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.heroTexts > h1 {
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 56px;
+  line-height: 72px;
+  text-align: center;
+}
+
+.heroTexts > p {
+  width: 688px;
+  margin: auto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.ctaButton {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+.ctaOne {
+  background: #5865f2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 24px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  border: 0px;
+}
+
+.ctaTwo {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 24px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #5865f2;
+  border: 0px;
+}
+
+.contain > img {
+  width: 100%;
+  height: 100%;
+}
+
+.glowline {
+  margin-top: 16px;
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(99, 102, 241, 0) 0%,
+    rgba(99, 102, 241, 1) 50%,
+    rgba(99, 102, 241, 0) 100%
+  );
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.8), 0 0 40px rgba(99, 102, 241, 0.6),
+    0 0 60px rgba(99, 102, 241, 0.4), 0 0 80px rgba(99, 102, 241, 0.2);
+  position: relative;
+}
+
+.imageContainer {
+  max-width: 85%;
+  margin: 100px auto 0px auto;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px 64px 16px;
+  }
+  .contain {
+    max-width: unset;
+  }
+  .heroTexts {
+    width: 100%;
+  }
+  .heroTexts h1 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  .heroTexts > p {
+    width: unset;
+    font-size: 16px;
+  }
+  .ctaButton {
+    flex-direction: column;
+  }
+  .ctaOne,
+  .ctaTwo {
+    justify-content: center;
+  }
+  .imageContainer {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}

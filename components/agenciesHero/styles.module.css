@@ -1,0 +1,160 @@
+.container {
+  background: #07071a;
+  padding: 40px 0px;
+  background-image: url("../../public/assets/Group\ 1171275058.png");
+  background-position: center left;
+  background-repeat: no-repeat;
+}
+
+.contain {
+  max-width: 92.5%;
+  margin: 0px 0px 0px auto;
+  display: flex;
+  align-items: center;
+}
+
+.textContain {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  gap: 16px;
+  width: 832px;
+  margin: 0 auto;
+}
+
+.textContain h1 {
+  font-weight: 900;
+  max-width: 600px;
+  font-size: 56px;
+  line-height: 72px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.textContain > p {
+  width: 600px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.heroBtn {
+  background: linear-gradient(87.46deg, #04072b -22.69%, #0d1891 133.56%);
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 11px 12px;
+  color: #ffffff;
+  width: fit-content;
+  font-family: "inter", sans-serif;
+  border-radius: 100px;
+  font-size: 12px;
+  position: relative;
+  isolation: isolate;
+}
+
+.heroBtn::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 100px;
+  background: linear-gradient(
+    268.23deg,
+    #c7c7c7 -5.7%,
+    rgba(242, 242, 242, 0) 111.22%
+  );
+  z-index: -1;
+  padding: 1px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.ctaButton {
+  display: flex;
+  gap: 16px;
+  padding-top: 24px;
+  justify-content: flex-start;
+}
+
+.ctaOne {
+  background: #5865f2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 24px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  border: 0px;
+  text-align: center;
+}
+
+.ctaTwo {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 24px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #5865f2;
+  border: 0px;
+}
+
+.imageContain {
+  width: 50%;
+}
+
+.imageContain img {
+  width: 100%;
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px 24px 56px 16px;
+  }
+  .contain {
+    max-width: unset;
+    display: block;
+  }
+  .textContain {
+    width: 100%;
+  }
+
+  .imageContain img {
+    width: 100%;
+    height: auto;
+  }
+  .textContain h1 {
+    max-width: unset;
+    width: 100%;
+    font-size: 40px;
+    line-height: 52px;
+  }
+  .textContain > p {
+    width: 100%;
+  }
+  .ctaButton {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ctaOne,
+  .ctaTwo {
+    justify-content: center;
+  }
+  .imageContain {
+    width: unset;
+  }
+  .imageContain > img {
+    padding-top: 32px;
+  }
+}

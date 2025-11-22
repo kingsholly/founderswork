@@ -1,0 +1,147 @@
+.swiperContainer {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+.swiperSlide {
+  height: auto;
+  display: flex;
+}
+
+.featureCard {
+  background: rgba(23, 23, 45, 0.6);
+  border: 1px solid #2d2d4d;
+  border-radius: 24px;
+  padding: 32px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.featureCard:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(71, 85, 105, 0.4);
+  padding: 8px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #e2e8f0;
+  width: fit-content;
+}
+
+.badgeIcon {
+  font-size: 16px;
+}
+
+.badgeText {
+  font-weight: 500;
+}
+
+.featureTitle {
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.featureDescription {
+  font-size: 15px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #818cf8;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.ctaLink:hover {
+  color: #a5b4fc;
+  gap: 12px;
+}
+
+.ctaLink svg {
+  transition: transform 0.2s ease;
+}
+
+.ctaLink:hover svg {
+  transform: translateX(4px);
+}
+
+.swiper :global(.swiper-pagination) {
+  bottom: 0 !important;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.swiper :global(.swiper-pagination-bullet) {
+  background: rgba(129, 140, 248, 0.3);
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper :global(.swiper-pagination-bullet-active) {
+  background: #818cf8;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.swiper :global(.swiper-button-prev),
+.swiper :global(.swiper-button-next) {
+  color: #818cf8;
+  width: 40px;
+  height: 40px;
+  background: rgba(129, 140, 248, 0.1);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.swiper :global(.swiper-button-prev):hover,
+.swiper :global(.swiper-button-next):hover {
+  background: rgba(129, 140, 248, 0.2);
+}
+
+.swiper :global(.swiper-button-prev):after,
+.swiper :global(.swiper-button-next):after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (min-width: 769px) {
+  .swiperContainer {
+    display: none;
+  }
+}
